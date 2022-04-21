@@ -1,4 +1,10 @@
-Usaremos webpack 
+Redux library
+npm i redux
+
+
+
+
+Iba a usar  webpack  pero termine no usandolo
 nota:debo tener node.js
 1. npm init  -y :Inicializar proyecto  de npm
 2. npm i @babel/core @babel/preset-env babel-loader webpack webpack-cli webpack-dev-server :dependencias de webpack, para tener rapidamente un ambiente de desarrollo
