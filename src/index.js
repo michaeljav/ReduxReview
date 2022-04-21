@@ -1,29 +1,7 @@
 
 
-// import {createStore} from 'redux'
-// const {createStore}  = require('redux')
 import {ADD_TODO,DELETE_TODO,DONE_TODO} from './redux/actionTypes.js';
 import store from './redux/store.js';
-
-// const itemListDom = document.querySelector('#itemList');
-// const itemDom = document.querySelector('#item');
-
-// console.log('itemDom');
-// console.log(itemDom.cloneNode(true)); 
-// itemListDom.textContent = '';
-
-// const inv= itemDom.querySelector('input');
-// const btnDeleteDom = itemDom.querySelector('button');
-//     const lblNameDom = itemDom.querySelector('span');
-// console.log('inv');
-// console.log(inv);
-// console.log(btnDeleteDom);
-// console.log(lblNameDom);
-// itemDom.classList.remove('d-none');
-    // lblNameDom.style.border = '2px solid red'; 
-    // lblNameDom.style.textDecoration = 'line-through'; 
-    // inv.checked = true;
-
 
 
 const itemListDom = document.querySelector('#itemList');
@@ -34,7 +12,7 @@ txtNewNoteDom.addEventListener('keyup', (e) => {
    if(e.keyCode === 13) {
      const text = e.target.value;
      e.target.value = '';
-     
+
     store.dispatch({
       type: ADD_TODO,
       payload: {
@@ -51,11 +29,6 @@ const updateList = (items) => {
 
 // delete list inside
 itemListDom.textContent = '';
-// itemListDom.innerHTML = '';
-//Find element inside
-// const inv= itemDom.querySelector('input');
-// console.log('inv');
-// console.log(inv);
 
 
    for(const item of items){
@@ -67,8 +40,7 @@ itemListDom.textContent = '';
     cloneDom.classList.remove('d-none');
     
     lblNameDom.textContent = item.text;
-    if(item.completed){
-      
+    if(item.completed){      
       lblNameDom.style.textDecoration = 'line-through'; 
     }
     
